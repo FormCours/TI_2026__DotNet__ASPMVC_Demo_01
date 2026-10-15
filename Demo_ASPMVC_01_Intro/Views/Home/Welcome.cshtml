@@ -1,0 +1,9 @@
+﻿<h1>Bienvenue sur l'application .Net !</h1>
+
+<p>Nous sommes le @ViewBag.Date</p>
+<p>Et ça fonctionne aussi avec @ViewData["Date"]</p>
+
+@if((bool)(TempData["OldRouting"] ?? false))
+{
+    <p class="text-danger">Veuillez actualiser vos favoris 😱</p>
+}

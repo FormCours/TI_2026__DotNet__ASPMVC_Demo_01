@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1 class="display-4">Welcome</h1>
+   
+    <h2>Exemple d'utilisation de Razor</h2>
+    <ul>
+        @for (int i = 0; i < 5; i++)
+        {
+            <li>Element @i</li>
+        }
+    </ul>
+
+    <p>Il est @DateTime.Now.ToLongTimeString(), il est donc @(DateTime.Now.Hour <= 12 ? "le matin" : "l'aprem") !</p>
+
+    <!-- Ceci est un commentaire HTML (Afficher dans le code HTML) -->
+    @* Commentaire Razor → Remarque : Le client est chiant !*@
+
+    <div>
+        @{
+            int a = 21;
+            int res = a * 2;
+
+            // Afficher du texte depuis une bloc sans balise
+            @: La valeur du resultat est @res !
+
+            int b = 13;
+            res -= b;
+        }
+    </div>
+
+</div>
